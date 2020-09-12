@@ -1,6 +1,6 @@
 # terraform-azurerm-k8s-calico-windows
 
-Terraform definition for trying out [Calico for Windows](https://docs.projectcalico.org/getting-started/windows-calico/) in a self-managed Kubernetes cluster on Azure with both a Linux and a Windows Server 1903 node for testing purposes. Find more details in the [blog post](TODO) (coming soon).
+Terraform definition for trying out [Calico for Windows](https://docs.projectcalico.org/getting-started/windows-calico/) in a self-managed Kubernetes cluster on Azure with both a Linux and a Windows Server 1903 node for testing purposes. Find more details in the [blog post](https://lippertmarkus.com/2020/09/12/k8s-calico-windows/).
 
 ## Deployment on Azure
 
@@ -21,4 +21,4 @@ kubectl get pod -A
 kubectl apply -f https://raw.githubusercontent.com/lippertmarkus/terraform-azurerm-k8s-calico-windows/master/example_workloads/win-webserver.yml
 ```
 
-You can also follow the [blog post](TODO) (coming soon) to see how network policies work with Calico.
+You can also follow the [blog post](https://lippertmarkus.com/2020/09/12/k8s-calico-windows/#creating-network-policies) to see how network policies work with Calico.
