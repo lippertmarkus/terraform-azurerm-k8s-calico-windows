@@ -20,18 +20,11 @@ GetCalicoKubeConfig -SecretName 'calico-node'
 "@
 (Get-Content C:\install-calico-windows.ps1).Replace($search, "$append`n$search") | Set-Content C:\install-calico-windows.ps1
 
-# run installation
-c:\install-calico-windows.ps1 -DownloadOnly yes -KubeVersion "1.19.1" -Datastore "etcdv3" -EtcdEndpoints "https://primary:2379"
-
-# install calico
-cd c:\CalicoWindows
-.\install-calico.ps1
+# run calico installation
+c:\install-calico-windows.ps1 -KubeVersion "1.19.1" -Datastore "etcdv3" -EtcdEndpoints "https://primary:2379"
 
 # install kubernetes services
-cd kubernetes
+cd c:\CalicoWindows\kubernetes
 .\install-kube-services.ps1
 Start-Service -Name kubelet
 Start-Service -Name kube-proxy
-
-# disable firewall
-Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
