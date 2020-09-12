@@ -21,4 +21,4 @@ kubectl get pod -A
 kubectl apply -f https://raw.githubusercontent.com/lippertmarkus/terraform-azurerm-k8s-calico-windows/master/example_workloads/win-webserver.yml
 ```
 
-You can also follow the [Calico documentation](https://docs.projectcalico.org/getting-started/windows-calico/demo) to see how network policies work with Calico.
+You can also follow the [blog post](TODO) (coming soon) to see how network policies work with Calico.

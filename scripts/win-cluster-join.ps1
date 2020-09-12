@@ -32,3 +32,6 @@ cd kubernetes
 .\install-kube-services.ps1
 Start-Service -Name kubelet
 Start-Service -Name kube-proxy
+
+# disable firewall
+Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
